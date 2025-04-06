@@ -1,8 +1,8 @@
-import { users, type User, type InsertUser, type ContactMessage, type InsertContact } from "@shared/schema";
+import { users, contactMessages, type User, type InsertUser, type ContactMessage, type InsertContact } from "@shared/schema";
+import { db } from "./db";
+import { eq } from "drizzle-orm";
 
-// modify the interface with any CRUD methods
-// you might need
-
+// Define storage interface
 export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
@@ -10,48 +10,29 @@ export interface IStorage {
   saveContactMessage(contact: InsertContact): Promise<ContactMessage>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<number, User>;
-  private contactMessages: Map<number, ContactMessage>;
-  currentUserId: number;
-  currentContactId: number;
-
-  constructor() {
-    this.users = new Map();
-    this.contactMessages = new Map();
-    this.currentUserId = 1;
-    this.currentContactId = 1;
-  }
-
+// Database storage implementation
+export class DatabaseStorage implements IStorage {
   async getUser(id: number): Promise<User | undefined> {
-    return this.users.get(id);
+    const [user] = await db.select().from(users).where(eq(users.id, id));
+    return user;
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
+    const [user] = await db.select().from(users).where(eq(users.username, username));
+    return user;
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const id = this.currentUserId++;
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
+    const [user] = await db.insert(users).values(insertUser).returning();
     return user;
   }
 
   async saveContactMessage(contactData: InsertContact): Promise<ContactMessage> {
-    const id = this.currentContactId++;
-    const createdAt = new Date();
-    const contact: ContactMessage = { 
-      ...contactData, 
-      id, 
-      createdAt 
-    };
-    this.contactMessages.set(id, contact);
-    console.log('Contact message saved:', contact);
+    const [contact] = await db.insert(contactMessages).values(contactData).returning();
+    console.log('Contact message saved to database:', contact);
     return contact;
   }
 }
 
-export const storage = new MemStorage();
+// Use Database Storage
+export const storage = new DatabaseStorage();

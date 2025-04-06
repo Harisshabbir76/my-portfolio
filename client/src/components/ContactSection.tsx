@@ -11,21 +11,16 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { Layers, Mail, MapPin, Github, Linkedin, Twitter, Codepen, Download } from "lucide-react";
 import { contactInfo } from "@/lib/data";
+import { contactFormSchema } from "@shared/schema";
 
-const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
-  email: z.string().email({ message: "Please enter a valid email address" }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters" })
-});
-
-type FormValues = z.infer<typeof formSchema>;
+type FormValues = z.infer<typeof contactFormSchema>;
 
 export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   
   const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
       email: "",
