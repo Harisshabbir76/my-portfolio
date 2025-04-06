@@ -1,14 +1,49 @@
 import { motion } from "framer-motion";
-import Canvas3D from "./Canvas3D";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Code, CodepenIcon, Github } from "lucide-react";
 import { developerInfo } from "@/lib/data";
 
 export default function HeroSection() {
   return (
     <section id="home" className="min-h-screen pt-20 flex items-center relative overflow-hidden">
-      {/* 3D animation canvas container */}
-      <div className="absolute inset-0 w-full h-full z-0">
-        <Canvas3D />
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 w-full h-full z-0 bg-background">
+        <div className="absolute top-20 -left-24 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-blob"></div>
+        <div className="absolute top-40 right-20 w-72 h-72 bg-secondary/20 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-tertiary/20 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+      </div>
+      
+      {/* Animated tech icons */}
+      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+        <motion.div 
+          className="absolute text-primary/10 top-20 left-1/4"
+          animate={{ 
+            y: [0, -10, 0], 
+            rotate: [0, 5, 0] 
+          }}
+          transition={{ repeat: Infinity, duration: 5 }}
+        >
+          <CodepenIcon size={80} />
+        </motion.div>
+        <motion.div 
+          className="absolute text-secondary/10 bottom-40 right-1/4"
+          animate={{ 
+            y: [0, 10, 0], 
+            rotate: [0, -5, 0] 
+          }}
+          transition={{ repeat: Infinity, duration: 4 }}
+        >
+          <Code size={100} />
+        </motion.div>
+        <motion.div 
+          className="absolute text-tertiary/10 bottom-20 left-1/5"
+          animate={{ 
+            y: [0, 15, 0], 
+            rotate: [0, 10, 0] 
+          }}
+          transition={{ repeat: Infinity, duration: 6 }}
+        >
+          <Github size={60} />
+        </motion.div>
       </div>
       
       <div className="container mx-auto px-4 md:px-8 relative z-10 pt-10">
