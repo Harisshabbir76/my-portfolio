@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import { useEffect } from "react";
+import { AvatarProvider } from "@/components/AvatarImage";
 
 function Router() {
   // Scroll to top on route change
@@ -23,8 +24,10 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router />
-      <Toaster />
+      <AvatarProvider>
+        <Router />
+        <Toaster />
+      </AvatarProvider>
     </QueryClientProvider>
   );
 }

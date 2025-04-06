@@ -1,8 +1,26 @@
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { ChevronDown, Code, CodepenIcon, Github } from "lucide-react";
 import { developerInfo } from "@/lib/data";
+import { AvatarImage, useAvatar } from "./AvatarImage";
+import { useEffect } from "react";
 
 export default function HeroSection() {
+  const { scrollY } = useScroll();
+  const { setInHeroSection } = useAvatar();
+  
+  // Update avatar context based on scroll position
+  useEffect(() => {
+    const unsubscribe = scrollY.on("change", (y) => {
+      if (y < 300) {
+        setInHeroSection(true);
+      } else {
+        setInHeroSection(false);
+      }
+    });
+    
+    return () => unsubscribe();
+  }, [scrollY, setInHeroSection]);
+  
   return (
     <section id="home" className="min-h-screen pt-20 flex items-center relative overflow-hidden">
       {/* Animated gradient background */}
@@ -111,6 +129,15 @@ export default function HeroSection() {
               </a>
             </motion.div>
           </motion.div>
+          
+          {/* Hero avatar image */}
+          <div className="hidden lg:flex justify-center items-center relative">
+            <AvatarImage 
+              position="hero" 
+              className="shadow-xl" 
+              size={300}
+            />
+          </div>
         </div>
         
         <motion.div 
