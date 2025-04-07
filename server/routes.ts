@@ -1,8 +1,11 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { storage } from "./storage";
+import { getStorage } from "./storage-factory";
 import { z } from "zod";
 import { contactFormSchema } from "@shared/schema";
+
+// Get the appropriate storage implementation
+const storage = getStorage();
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission endpoint
