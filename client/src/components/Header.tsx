@@ -70,9 +70,8 @@ export default function Header() {
         </ul>
         
         <a 
-          href="/John_Doe_Resume.pdf" 
-          target="_blank" 
-          rel="noopener noreferrer"
+          href="/assets/Resume.pdf" 
+          download
           className="hidden md:block px-5 py-2 border border-primary text-primary rounded hover:bg-primary/10 transition-all duration-300"
         >
           Resume
@@ -105,9 +104,8 @@ export default function Header() {
               ))}
               <li className="pt-3">
                 <a 
-                  href="/John_Doe_Resume.pdf" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                  href="/assets/Resume.pdf" 
+                  download
                   className="block w-full text-center px-5 py-2 border border-primary text-primary rounded hover:bg-primary/10 transition-all duration-300"
                   onClick={closeMenu}
                 >
