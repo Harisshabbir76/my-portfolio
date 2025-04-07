@@ -26,13 +26,13 @@ export default function AboutSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <p className="text-muted-foreground">
-              Hello! I'm <span className="text-primary">{developerInfo.firstName}</span>, a passionate MERN stack developer with a love for creating interactive, responsive, and user-friendly web applications.
+              Hello! I'm <span className="text-primary">{developerInfo.firstName}</span>, a fresh and enthusiastic full-stack web developer with a passion for building interactive and user-friendly web applications.
             </p>
             <p className="text-muted-foreground">
-              With several years of experience in web development, I've worked on a diverse range of projects from e-commerce platforms to real-time applications. My focus is on writing clean, efficient code and implementing modern design principles.
+              As a recent graduate and self-taught developer, I've focused on developing practical skills through hands-on projects. I'm particularly interested in MERN stack development and Python/Django frameworks, constantly expanding my knowledge through building real-world applications.
             </p>
             <p className="text-muted-foreground">
-              I enjoy solving complex problems and continuously learning new technologies to stay at the forefront of web development.
+              I'm eager to apply my skills in a professional environment, collaborate with experienced developers, and contribute to meaningful projects while continuing to grow my expertise in web development.
             </p>
             
             <div className="pt-4">

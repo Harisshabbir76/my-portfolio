@@ -114,7 +114,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "E-commerce Website",
-    description: "A full-featured e-commerce website built with Django framework, featuring product catalog, user authentication, and checkout functionality.",
+    description: "A simple e-commerce website built with Django framework, featuring product catalog, user authentication, and checkout functionality. One of my first backend projects.",
     category: "fullstack",
     technologies: ["Python", "Django", "HTML/CSS", "JavaScript"],
     github: "https://github.com/Harisshabbir76/E-com-web-Django",
@@ -124,7 +124,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "MERN Chat App",
-    description: "A real-time chat application built with the MERN stack (MongoDB, Express, React, Node.js) featuring user authentication, chat rooms, and direct messaging.",
+    description: "A real-time chat application built with the MERN stack featuring user authentication, chat rooms, and direct messaging. Built as part of my journey learning full-stack development.",
     category: "fullstack",
     technologies: ["TypeScript", "React", "Node.js", "MongoDB", "Express"],
     github: "https://github.com/Harisshabbir76/Mern-Chat-App",
@@ -134,7 +134,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "MERN Job Portal",
-    description: "A job portal application built with the MERN stack where employers can post jobs and job seekers can apply. Features user authentication and profile management.",
+    description: "A job portal application built with the MERN stack where employers can post jobs and job seekers can apply. Developed to showcase my TypeScript and React skills.",
     category: "fullstack",
     technologies: ["TypeScript", "React", "Node.js", "MongoDB", "Express"],
     github: "https://github.com/Harisshabbir76/MERN-job-portal",
@@ -143,18 +143,18 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Portfolio Generator",
-    description: "A portfolio generator application built with the MERN stack that allows users to create and customize their own portfolio websites.",
+    title: "To-Do List (Full Stack)",
+    description: "A full-stack to-do list application built with Next.js for the frontend and Node.js for the backend. A practical project to learn modern web development techniques.",
     category: "fullstack",
-    technologies: ["TypeScript", "React", "Node.js", "MongoDB", "Express"],
-    github: "https://github.com/Harisshabbir76/MERN-portfolio-generator",
+    technologies: ["TypeScript", "Next.js", "Node.js", "Express"],
+    github: "https://github.com/Harisshabbir76/to-do-list-full-stack-",
     liveDemo: "",
     icon: createIcon(Layout, "text-primary opacity-20 w-24 h-24")
   },
   {
     id: 5,
     title: "Django CRM",
-    description: "A Customer Relationship Management (CRM) system built with Django, featuring customer management, lead tracking, and sales analytics.",
+    description: "A Customer Relationship Management (CRM) system built with Django, featuring customer management and lead tracking. Created as a learning project for Python web development.",
     category: "fullstack",
     technologies: ["Python", "Django", "HTML/CSS", "JavaScript"],
     github: "https://github.com/Harisshabbir76/Django-CRM",
@@ -163,11 +163,11 @@ export const projects: Project[] = [
   },
   {
     id: 6,
-    title: "Instagram Clone (Postgram)",
-    description: "An Instagram-like social media platform built with Django and React, featuring photo sharing, comments, likes, and user profiles.",
+    title: "Blog Website",
+    description: "A simple blog website built with Django. Features include user authentication, post creation/editing, and commenting. One of my early Python web projects.",
     category: "fullstack",
-    technologies: ["TypeScript", "React", "Django", "PostgreSQL"],
-    github: "https://github.com/Harisshabbir76/Postgram-Instagram-",
+    technologies: ["Python", "Django", "HTML/CSS", "JavaScript"],
+    github: "https://github.com/Harisshabbir76/Blog-Website-Django",
     liveDemo: "",
     icon: createIcon(PenTool, "text-[hsl(36,100%,50%)] opacity-20 w-24 h-24")
   }

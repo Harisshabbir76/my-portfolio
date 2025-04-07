@@ -17,7 +17,7 @@ export interface Project {
   id: number;
   title: string;
   description: string;
-  category: "frontend" | "fullstack" | "3d";
+  category: "frontend" | "fullstack" | "backend";
   technologies: string[];
   github?: string;
   liveDemo?: string;

@@ -37,7 +37,7 @@ export default function ProjectsSection() {
             { id: "all", label: "All" },
             { id: "frontend", label: "Frontend" },
             { id: "fullstack", label: "Full Stack" },
-            { id: "3d", label: "3D / Animation" }
+            { id: "backend", label: "Backend" }
           ].map((category) => (
             <button
               key={category.id}
@@ -75,7 +75,7 @@ export default function ProjectsSection() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <a 
-            href="https://github.com/johndoe" 
+            href="https://github.com/Harisshabbir76" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center px-5 py-3 border border-primary text-primary rounded hover:bg-primary/10 transition-all duration-300 group"
