@@ -18,16 +18,17 @@ import {
 import React from "react";
 
 export const developerInfo: DeveloperInfo = {
-  firstName: "John",
-  lastName: "Doe",
-  role: "MERN Stack Developer",
+  firstName: "Haris",
+  lastName: "Shabbir",
+  role: "Full Stack Developer",
   mainTechnologies: [
     "JavaScript (ES6+)",
+    "TypeScript",
     "React.js",
     "Node.js",
     "Express.js",
     "MongoDB",
-    "Three.js"
+    "Python/Django"
   ]
 };
 
@@ -48,35 +49,35 @@ export const skills: {
       icon: createIcon(Code, "text-primary h-5 w-5")
     },
     {
-      name: "JavaScript",
-      proficiency: 95,
+      name: "TypeScript",
+      proficiency: 85,
       icon: createIcon(Code, "text-primary h-5 w-5")
     },
     {
-      name: "Three.js",
-      proficiency: 80,
-      icon: createIcon(Box, "text-primary h-5 w-5")
+      name: "JavaScript",
+      proficiency: 90,
+      icon: createIcon(Code, "text-primary h-5 w-5")
     },
     {
-      name: "CSS/SCSS",
+      name: "HTML/CSS",
       proficiency: 85,
       icon: createIcon(PenTool, "text-primary h-5 w-5")
     }
   ],
   backend: [
     {
-      name: "Node.js",
+      name: "Python/Django",
       proficiency: 90,
       icon: createIcon(Server, "text-secondary h-5 w-5")
     },
     {
-      name: "Express.js",
+      name: "Node.js",
       proficiency: 85,
       icon: createIcon(Server, "text-secondary h-5 w-5")
     },
     {
       name: "MongoDB",
-      proficiency: 80,
+      proficiency: 85,
       icon: createIcon(Database, "text-secondary h-5 w-5")
     },
     {
@@ -92,9 +93,9 @@ export const skills: {
       icon: createIcon(GitBranch, "text-[hsl(36,100%,50%)] h-5 w-5")
     },
     {
-      name: "Docker",
-      proficiency: 70,
-      icon: createIcon(HardDrive, "text-[hsl(36,100%,50%)] h-5 w-5")
+      name: "Next.js",
+      proficiency: 80,
+      icon: createIcon(Code, "text-[hsl(36,100%,50%)] h-5 w-5")
     },
     {
       name: "Responsive Design",
@@ -102,8 +103,8 @@ export const skills: {
       icon: createIcon(Smartphone, "text-[hsl(36,100%,50%)] h-5 w-5")
     },
     {
-      name: "CI/CD",
-      proficiency: 75,
+      name: "Full Stack Development",
+      proficiency: 85,
       icon: createIcon(Workflow, "text-[hsl(36,100%,50%)] h-5 w-5")
     }
   ]
@@ -112,73 +113,73 @@ export const skills: {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    description: "A full-featured e-commerce platform with product catalog, cart functionality, payment integration, and admin dashboard.",
+    title: "E-commerce Website",
+    description: "A full-featured e-commerce website built with Django framework, featuring product catalog, user authentication, and checkout functionality.",
     category: "fullstack",
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    github: "https://github.com/johndoe/ecommerce-platform",
-    liveDemo: "https://ecommerce-platform-demo.com",
+    technologies: ["Python", "Django", "HTML/CSS", "JavaScript"],
+    github: "https://github.com/Harisshabbir76/E-com-web-Django",
+    liveDemo: "",
     icon: createIcon(Store, "text-primary opacity-20 w-24 h-24")
   },
   {
     id: 2,
-    title: "3D Interactive Gallery",
-    description: "An immersive 3D gallery showcasing artwork with interactive elements and animations built with Three.js.",
-    category: "3d",
-    technologies: ["Three.js", "JavaScript", "WebGL", "HTML/CSS"],
-    github: "https://github.com/johndoe/3d-gallery",
-    liveDemo: "https://3d-gallery-demo.com",
-    icon: createIcon(Box, "text-secondary opacity-20 w-24 h-24")
+    title: "MERN Chat App",
+    description: "A real-time chat application built with the MERN stack (MongoDB, Express, React, Node.js) featuring user authentication, chat rooms, and direct messaging.",
+    category: "fullstack",
+    technologies: ["TypeScript", "React", "Node.js", "MongoDB", "Express"],
+    github: "https://github.com/Harisshabbir76/Mern-Chat-App",
+    liveDemo: "",
+    icon: createIcon(Globe, "text-secondary opacity-20 w-24 h-24")
   },
   {
     id: 3,
-    title: "Admin Dashboard UI",
-    description: "A responsive admin dashboard with customizable widgets, charts, and data visualization components.",
-    category: "frontend",
-    technologies: ["React", "Chart.js", "Tailwind CSS", "Redux"],
-    github: "https://github.com/johndoe/admin-dashboard",
-    liveDemo: "https://admin-dashboard-demo.com",
+    title: "MERN Job Portal",
+    description: "A job portal application built with the MERN stack where employers can post jobs and job seekers can apply. Features user authentication and profile management.",
+    category: "fullstack",
+    technologies: ["TypeScript", "React", "Node.js", "MongoDB", "Express"],
+    github: "https://github.com/Harisshabbir76/MERN-job-portal",
+    liveDemo: "",
     icon: createIcon(BarChart, "text-[hsl(36,100%,50%)] opacity-20 w-24 h-24")
   },
   {
     id: 4,
-    title: "Social Media App",
-    description: "A feature-rich social media application with real-time chat, post sharing, and user profiles.",
+    title: "Portfolio Generator",
+    description: "A portfolio generator application built with the MERN stack that allows users to create and customize their own portfolio websites.",
     category: "fullstack",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-    github: "https://github.com/johndoe/social-media-app",
-    liveDemo: "https://social-media-app-demo.com",
-    icon: createIcon(Globe, "text-primary opacity-20 w-24 h-24")
+    technologies: ["TypeScript", "React", "Node.js", "MongoDB", "Express"],
+    github: "https://github.com/Harisshabbir76/MERN-portfolio-generator",
+    liveDemo: "",
+    icon: createIcon(Layout, "text-primary opacity-20 w-24 h-24")
   },
   {
     id: 5,
-    title: "Portfolio Website",
-    description: "A modern portfolio website showcasing developer projects and skills with 3D elements and animations.",
-    category: "frontend",
-    technologies: ["React", "Three.js", "Framer Motion", "Tailwind CSS"],
-    github: "https://github.com/johndoe/portfolio",
-    liveDemo: "https://johndoe-portfolio.com",
-    icon: createIcon(Layout, "text-secondary opacity-20 w-24 h-24")
+    title: "Django CRM",
+    description: "A Customer Relationship Management (CRM) system built with Django, featuring customer management, lead tracking, and sales analytics.",
+    category: "fullstack",
+    technologies: ["Python", "Django", "HTML/CSS", "JavaScript"],
+    github: "https://github.com/Harisshabbir76/Django-CRM",
+    liveDemo: "",
+    icon: createIcon(Database, "text-secondary opacity-20 w-24 h-24")
   },
   {
     id: 6,
-    title: "3D Product Configurator",
-    description: "An interactive 3D product configurator allowing users to customize products in real-time with color and feature options.",
-    category: "3d",
-    technologies: ["Three.js", "React", "WebGL", "GLSL"],
-    github: "https://github.com/johndoe/product-configurator",
-    liveDemo: "https://product-configurator-demo.com",
-    icon: createIcon(Figma, "text-[hsl(36,100%,50%)] opacity-20 w-24 h-24")
+    title: "Instagram Clone (Postgram)",
+    description: "An Instagram-like social media platform built with Django and React, featuring photo sharing, comments, likes, and user profiles.",
+    category: "fullstack",
+    technologies: ["TypeScript", "React", "Django", "PostgreSQL"],
+    github: "https://github.com/Harisshabbir76/Postgram-Instagram-",
+    liveDemo: "",
+    icon: createIcon(PenTool, "text-[hsl(36,100%,50%)] opacity-20 w-24 h-24")
   }
 ];
 
 export const contactInfo: ContactInfo = {
-  email: "hello@example.com",
-  location: "San Francisco, CA",
+  email: "contact@example.com", // Update with your actual email if you'd like
+  location: "Pakistan", 
   social: {
-    github: "https://github.com/johndoe",
-    linkedin: "https://linkedin.com/in/johndoe",
-    twitter: "https://twitter.com/johndoe",
-    codepen: "https://codepen.io/johndoe"
+    github: "https://github.com/Harisshabbir76",
+    linkedin: "https://linkedin.com/in/haris-shabbir",
+    twitter: "https://twitter.com/harisshabbir",
+    codepen: "https://codepen.io/harisshabbir"
   }
 };
