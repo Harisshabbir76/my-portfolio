@@ -231,7 +231,7 @@ export default function ContactSection() {
             <div>
               <h3 className="text-2xl font-medium mb-4">Resume</h3>
               <a 
-                href="/John_Doe_Resume.pdf" 
+                href="/Resume.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 id="resume" 

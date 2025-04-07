@@ -4,13 +4,26 @@ import { getStorage } from "./storage-factory";
 import { z } from "zod";
 import { contactFormSchema } from "@shared/schema";
 
-// Get the appropriate storage implementation
-const storage = getStorage();
+// Get the appropriate storage implementation - lazy load for better serverless performance
+let storageInstance: ReturnType<typeof getStorage> | null = null;
+
+const getStorageInstance = () => {
+  if (!storageInstance) {
+    storageInstance = getStorage();
+  }
+  return storageInstance;
+};
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Health check endpoint for Vercel
+  app.get("/api/health", (req, res) => {
+    res.status(200).json({ status: "ok", timestamp: new Date().toISOString() });
+  });
+
   // Contact form submission endpoint
   app.post("/api/contact", async (req, res) => {
     try {
+      const storage = getStorageInstance();
       const validation = contactFormSchema.safeParse(req.body);
       
       if (!validation.success) {
@@ -38,6 +51,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Create HTTP server (for development only)
   const httpServer = createServer(app);
 
   return httpServer;
