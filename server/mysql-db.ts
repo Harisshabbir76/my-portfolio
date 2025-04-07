@@ -24,8 +24,8 @@ export const getMySQLDB = async () => {
   if (!db) {
     try {
       const conn = await createMySQLConnection();
-      // @ts-ignore - Ignoring TypeScript error due to drizzle-orm type compatibility issues
-      db = drizzle(conn, { schema });
+      // Specify mode as 'default' to fix the DrizzleError
+      db = drizzle(conn, { schema, mode: 'default' });
       console.log('MySQL Drizzle instance created');
     } catch (error) {
       console.error('Failed to initialize MySQL connection:', error);
