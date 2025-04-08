@@ -128,7 +128,7 @@ export default function HeroSection() {
                 Contact Me
               </a>
               <a 
-                href="/assets/Resume.pdf" 
+                href="/Resume.pdf" 
                 download
                 className="px-6 py-3 border border-primary text-primary rounded font-medium hover:bg-primary/10 transition-all duration-300"
               >

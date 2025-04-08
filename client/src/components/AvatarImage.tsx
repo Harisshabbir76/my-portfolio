@@ -85,8 +85,8 @@ export function AvatarImage({ position, className = "", size = 320 }: AvatarImag
       initial={{ opacity: position === "hero" ? 1 : 0 }}
     >
       <img 
-        src="/avatar.svg" 
-        alt="Developer Avatar" 
+        src="/avatar.jpg" 
+        alt="Haris Shabbir" 
         className="w-full h-full object-cover"
         onError={(e) => {
           // Fallback to a default silhouette if image fails to load
