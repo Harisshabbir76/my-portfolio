@@ -18,12 +18,36 @@ export default function AboutSection() {
         </motion.div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Avatar section - moved to first column on all devices */}
           <motion.div 
-            className="space-y-6"
+            className="relative mx-auto flex justify-center items-center order-1 lg:order-1"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            {/* Container for avatar with decorative border */}
+            <div className="relative group">
+              {/* Decorative border that moves on hover */}
+              <div className="absolute inset-0 border-2 border-primary rounded-full transform translate-x-5 translate-y-5 transition-transform group-hover:translate-x-3 group-hover:translate-y-3 duration-300 w-[280px] h-[280px]"></div>
+              
+              {/* About section avatar */}
+              <div className="relative">
+                <AvatarImage 
+                  position="about" 
+                  className="shadow-xl" 
+                  size={270}
+                />
+              </div>
+            </div>
+          </motion.div>
+          
+          <motion.div 
+            className="space-y-6 order-2 lg:order-2"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p className="text-muted-foreground">
               Hello! I'm <span className="text-primary">{developerInfo.firstName}</span>, a fresh and enthusiastic full-stack web developer with a passion for building interactive and user-friendly web applications.
@@ -60,29 +84,6 @@ export default function AboutSection() {
                 </svg>
                 Download Resume
               </a>
-            </div>
-          </motion.div>
-          
-          <motion.div 
-            className="relative mx-auto flex justify-center items-center"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            {/* Container for avatar with decorative border */}
-            <div className="relative group">
-              {/* Decorative border that moves on hover */}
-              <div className="absolute inset-0 border-2 border-primary rounded-full transform translate-x-5 translate-y-5 transition-transform group-hover:translate-x-3 group-hover:translate-y-3 duration-300 w-[280px] h-[280px]"></div>
-              
-              {/* About section avatar */}
-              <div className="relative">
-                <AvatarImage 
-                  position="about" 
-                  className="shadow-xl" 
-                  size={270}
-                />
-              </div>
             </div>
           </motion.div>
         </div>

@@ -65,9 +65,11 @@ export default function HeroSection() {
       </div>
       
       <div className="container mx-auto px-4 md:px-8 relative z-10 pt-10">
+        {/* Use different layouts for mobile and desktop */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Text content */}
           <motion.div 
-            className="space-y-6"
+            className="space-y-6 order-1 lg:order-1"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -97,7 +99,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              I build things for the web
+              I am MERN full stack developer
             </motion.h2>
             
             <motion.p 
@@ -137,12 +139,12 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
           
-          {/* Hero avatar image */}
-          <div className="hidden lg:flex justify-center items-center relative">
+          {/* Hero avatar image - with different order on mobile vs desktop */}
+          <div className="flex justify-center items-center relative mt-8 lg:mt-0 order-2 lg:order-2">
             <AvatarImage 
               position="hero" 
               className="shadow-xl" 
-              size={300}
+              size={280}
             />
           </div>
         </div>
