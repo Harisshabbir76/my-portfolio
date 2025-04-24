@@ -7,7 +7,7 @@ import Home from "@/pages/Home";
 import { useEffect } from "react";
 import { AvatarProvider } from "@/components/AvatarImage";
 
-function Router() {
+function Router() { 
   // Scroll to top on route change
   useEffect(() => {
     window.scrollTo(0, 0);
